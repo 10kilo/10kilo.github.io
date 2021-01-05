@@ -12,7 +12,7 @@
 
 
 
-<title>Hello World | Hexo</title>
+<title>Centos7下安装Ghost | Hexo</title>
 
 
 
@@ -173,7 +173,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Hello World</h1>
+            <h1 class="post-title">Centos7下安装Ghost</h1>
             
                 <div class="post-meta">
                     
@@ -182,24 +182,33 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">January 5, 2021&nbsp;&nbsp;13:23:20</a>
+                        Date: <a href="#">April 11, 2018&nbsp;&nbsp;19:52:48</a>
                         </span>
                     
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/blog/">blog</a>
+                            
+                        </span>
                     
                 </div>
             
         </header>
 
         <div class="post-content">
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+            <p>ghost是基于node.js的新一代博客平台——相比日渐臃肿、无所不能的WordPress，Ghost更专注于博客，在官网上打出“只做博客平台”的口号，因此相对WordPress会更加简洁易用。<a id="more"></a></p>
+<h1 id="1-基础配置"><a href="#1-基础配置" class="headerlink" title="1.基础配置"></a>1.基础配置</h1><h2 id="1-1安装node-js及nginx"><a href="#1-1安装node-js及nginx" class="headerlink" title="1.1安装node.js及nginx"></a>1.1安装node.js及nginx</h2><figure class="highlight plain"><figcaption><span>--silent --location</span><a target="_blank" rel="noopener" href="https://rpm.nodesource.com/setup_6.x">| sudo bash -</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum -y install nodejs</span><br><span class="line">sudo yum install gcc-c++ make</span><br><span class="line">yum install -y nginx</span><br></pre></td></tr></table></figure>
+<h1 id="2-安装ghost-cli"><a href="#2-安装ghost-cli" class="headerlink" title="2.安装ghost-cli"></a>2.安装ghost-cli</h1><p>ghost-cli是1.0版本之后出现的新工具。<br>安装ghost-cli:<br><code>sudo npm i -g ghost-cli</code></p>
+<h1 id="3-ghost安装"><a href="#3-ghost安装" class="headerlink" title="3.ghost安装"></a>3.ghost安装</h1><p>以文件夹blog为例，我们可以先创建一个叫做blog的文件夹安放我们的博客文件:<br><code>mkdir blog</code><br><code>cd blog</code></p>
+<p>然后就可以使用ghost-li来安装ghost了<br><code>ghost install [version]</code><br>version可为1.0.2等等,如果要安装最新版只需ghost install即可.</p>
+<p>warning:<br>此上安装方法数据库默认为mysql,如果使用sqlite3可以使用一下语句:<br><code>ghost install --db sqlite3 --dbpath ./content/data/ghost.db</code></p>
+<p>接下来会有几行warning:<br>System checks failed with message: ‘Linux version is not Ubuntu 16’<br>Some features of ghost-cli may not work without additional configuration<br>…</p>
+<p>我选择了无视它继续往前走<br>后面就会是让你输入blogUrl<br>是否配置nginx SSL Systemd<br>按照自己意愿做出选择就好.</p>
+<h1 id="4-使用"><a href="#4-使用" class="headerlink" title="4.使用"></a>4.使用</h1><p>在nginx.conf做好配置后就能够重启nginx了，如果域名解析正确就能够使用了</p>
+<p>进入 http://你的域名/ghost<br>该网址为ghost的管理后台</p>
+<h1 id="5-ssl"><a href="#5-ssl" class="headerlink" title="5.ssl"></a>5.ssl</h1><p>出于安全策略， Let’s Encrypt 签发的证书有效期只有 90 天，所以需要每隔三个月就要更新一次安全证书，3个月到期后要重新生成SSL进入服务器输入：<br><code>certbot renew</code></p>
 
         </div>
 
@@ -214,7 +223,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://example.com/2021/01/05/hello-world/">http://example.com/2021/01/05/hello-world/</a></span>
+                        <span><a href="http://example.com/2018/04/11/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85Ghost/">http://example.com/2018/04/11/Centos7%E4%B8%8B%E5%AE%89%E8%A3%85Ghost/</a></span>
                     </p>
                 
                 
@@ -237,6 +246,10 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/ghost/"># ghost</a>
+                    
+                        
                 </span>
             </div>
             <div>
@@ -247,8 +260,10 @@
         </section>
         <section class="post-nav">
             
+                <a class="prev" rel="prev" href="/2018/04/14/%E9%83%A8%E7%BD%B2Hexo%E5%88%B0VPS/">部署Hexo到VPS</a>
             
-            <a class="next" rel="next" href="/2018/04/14/%E9%83%A8%E7%BD%B2Hexo%E5%88%B0VPS/">部署Hexo到VPS</a>
+            
+            <a class="next" rel="next" href="/2018/04/10/Markdown%E8%AF%AD%E6%B3%95/">Markdown语法</a>
             
         </section>
 

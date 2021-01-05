@@ -12,7 +12,7 @@
 
 
 
-<title>Hello World | Hexo</title>
+<title>Mac更新后开关机变英文 | Hexo</title>
 
 
 
@@ -107,73 +107,11 @@
             <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
-
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
-
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Hello World</h1>
+            <h1 class="post-title">Mac更新后开关机变英文</h1>
             
                 <div class="post-meta">
                     
@@ -182,7 +120,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">January 5, 2021&nbsp;&nbsp;13:23:20</a>
+                        Date: <a href="#">March 10, 2018&nbsp;&nbsp;20:16:50</a>
                         </span>
                     
                     
@@ -191,15 +129,9 @@
         </header>
 
         <div class="post-content">
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+            <p>macos 10.13 更新小版本后开机进入系统在用户名界面和关机重起等变成了英文界面了<br><img src="https://i.loli.net/2018/11/09/5be4ee01ab12d.jpeg"><br>解决方法：<br>打开终端输入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$  sudo languagesetup</span><br><span class="line">$  输入密码</span><br><span class="line">$  4  &#x2F;&#x2F;输入4回车</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2018/11/09/5be4eece45c33.png" alt="屏幕快照 2018-11-09 上午10.19.37.png"><br>重启解决。</p>
 
         </div>
 
@@ -214,7 +146,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://example.com/2021/01/05/hello-world/">http://example.com/2021/01/05/hello-world/</a></span>
+                        <span><a href="http://example.com/2018/03/10/Mac%E6%9B%B4%E6%96%B0%E5%90%8E%E5%BC%80%E5%85%B3%E6%9C%BA%E5%8F%98%E8%8B%B1%E6%96%87/">http://example.com/2018/03/10/Mac%E6%9B%B4%E6%96%B0%E5%90%8E%E5%BC%80%E5%85%B3%E6%9C%BA%E5%8F%98%E8%8B%B1%E6%96%87/</a></span>
                     </p>
                 
                 
@@ -237,6 +169,10 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/macos/"># macos</a>
+                    
+                        
                 </span>
             </div>
             <div>
@@ -247,8 +183,8 @@
         </section>
         <section class="post-nav">
             
+                <a class="prev" rel="prev" href="/2018/04/10/Macos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Macos常用命令</a>
             
-            <a class="next" rel="next" href="/2018/04/14/%E9%83%A8%E7%BD%B2Hexo%E5%88%B0VPS/">部署Hexo到VPS</a>
             
         </section>
 
