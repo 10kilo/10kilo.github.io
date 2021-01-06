@@ -14,7 +14,7 @@
 
 
 
-<title>Hello World | 10kilo&#39;blog</title>
+<title>Mac连接windows共享打印机 | 10kilo&#39;blog</title>
 
 
 
@@ -175,7 +175,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Hello World</h1>
+            <h1 class="post-title">Mac连接windows共享打印机</h1>
             
                 <div class="post-meta">
                     
@@ -184,24 +184,44 @@
 
                     
                         <span class="post-time">
-                        日期: <a href="#">一月 5, 2021&nbsp;&nbsp;13:23:20</a>
+                        日期: <a href="#">一月 6, 2021&nbsp;&nbsp;10:50:33</a>
                         </span>
                     
+                    
+                        <span class="post-category">
+                    分类:
+                            
+                                <a href="/categories/mac/">mac</a>
+                            
+                        </span>
                     
                 </div>
             
         </header>
 
         <div class="post-content">
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+            <p>用一台windows做为打印机共享主机。mac无法连接windows共享打印要<br>下面是解决方法。</p>
+<h1 id="windows电脑："><a href="#windows电脑：" class="headerlink" title="windows电脑："></a>windows电脑：</h1><blockquote>
+<p>1、共享打印的windows主机打开控制面板 =&gt; 程序和功能 =》打开和关闭windows功能 =》 启用lpd打印。<br>2、选择打印机共享，比如共享名是MF243D，本机ip地址是192.168.97.22。这些后面都会用到。<br>[image:D48A38F9-977F-4704-BAAE-F99EDD4ADC0C-302-0000141C96454275/截屏2019-12-19下午6.20.19.png]</p>
+</blockquote>
+<p>[image:4E634D42-6245-47E0-8D57-8D83F4849F9C-302-0000141D39C1BD83/截屏2019-12-19下午6.20.42.png]</p>
+<h1 id="Mac电脑："><a href="#Mac电脑：" class="headerlink" title="Mac电脑："></a>Mac电脑：</h1><p>先打开系统偏好设置， 然后打开::网络::</p>
+<p>[image:3D94F7A1-9E7A-4BB1-A613-CDE534E62D42-3861-000031B98D3B9812/屏幕快照 2019-11-29 上午8.53.06.png]</p>
+<p>然后选择::高级::</p>
+<p>[image:BA14FCCC-1899-4B79-9FA8-463AFEFD51E8-3861-000031A39B0D259B/屏幕快照 2019-11-29 上午8.51.14.png]</p>
+<p>再选择wins</p>
+<p>[image:609A32BC-BD28-4952-AC8A-79F1587ED0C5-3861-000031A68163A509/屏幕快照 2019-11-29 上午8.51.20.png]</p>
+<p>完成后点击ok，再点击Apply</p>
+<blockquote>
+<p>1&gt; 系统偏好设置 =》 打印机和扫描仪 =》右侧 “+” 按钮，添加打印机 =》工具栏里高级（没有的，可以按住 command键然后鼠标右键，自定义图标，将“高级”（齿轮）图标拖到工具栏） =》填写具体内容<br>2&gt; 添加打印机的设置<br>类型选择：LPD/LPR主机或打印机<br>URL:lpd://192.168.1.188【主机的地址】/hp【windows上共享的打印机名】<br>使用：选择刚才打印机直接插mac时给安装的驱动。<br>点击“添加”按钮就完成了。</p>
+</blockquote>
+<hr>
+<p>接下来进入::打印机与扫描仪::<br>[image:5D231B03-1777-4671-8BA2-94BCBA772791-302-00000E1404681535/截屏2019-12-19下午4.27.15.png]</p>
+<p>[image:D1D39B38-247A-4989-ADBD-B2627A006161-302-00000E276F94D955/截屏2019-12-19下午4.31.07.png]</p>
+<p>点击添加按钮</p>
+<p>[image:7A58DC74-66DA-442C-97FA-1AF418C904A4-302-00000E4C6E6AA0BB/E3EDEB45-BEED-42B1-9CF0-ABB1393C4E90.png]</p>
+<p>[image:F1D538FA-2C56-47E3-93A2-C7E06EBBEF8B-302-00000FD7F2560529/截屏2019-12-19下午4.55.39.png]</p>
+<p>右击标题栏选择则自定义工具栏，打开高级选项，输入名称即可。<br>[image:25B06E68-F84F-4506-9BA0-87685F822182-302-00000FD120B85853/截屏2019-12-19下午5.00.33.png]</p>
 
         </div>
 
@@ -211,6 +231,10 @@
                 <span>标签:</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/mac/"># mac</a>
+                    
+                        
                 </span>
             </div>
             <div>
@@ -221,10 +245,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2021/01/06/Mac%E8%BF%9E%E6%8E%A5windows%E5%85%B1%E4%BA%AB%E6%89%93%E5%8D%B0%E6%9C%BA/">Mac连接windows共享打印机</a>
             
-            
-            <a class="next" rel="next" href="/2018/04/14/%E9%83%A8%E7%BD%B2Hexo%E5%88%B0VPS/">部署Hexo到VPS</a>
+            <a class="next" rel="next" href="/2021/01/05/hello-world/">Hello World</a>
             
         </section>
 
